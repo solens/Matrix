@@ -15,5 +15,5 @@ add_subdirectory(../cpp/driver driver)
 
 add_executable(turn_lights_off turn_lights_off.cpp)
   set_property(TARGET turn_lights_off PROPERTY CXX_STANDARD 11)
-  target_link_libraries(arc_demo matrix_creator_hal)
-  target_link_libraries(arc_demo ${CMAKE_THREAD_LIBS_INIT})
+  target_link_libraries(turn_lights_off matrix_creator_hal)
+  target_link_libraries(turn_lights_off ${CMAKE_THREAD_LIBS_INIT})
