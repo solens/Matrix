@@ -26,12 +26,20 @@ int main() {
       led.blue = 0;
       led.white = 0;
     }
-    image1d.leds[counter % 9].white = 10;
+
+    for (int led_num = 0; led_num < 18; ++led_num){
+      image1d.leds[led_num].red = 0;
+      image1d.leds[led_num].green = 0;
+      image1d.leds[led_num].blue = 0;
+      image1d.leds[led_num].white = counter * 255 % 18;
+    }
+    
+    
 
     everloop.Write(&image1d);
     ++counter;
     usleep(20000);
-    cout << counter << "\n";
+    std::cout << counter << "\n";
   }
 
   return 0;
