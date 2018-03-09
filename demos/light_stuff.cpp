@@ -38,7 +38,7 @@ int main() {
     {255,0,255},
     {255,0,192},
     {255,0,96}
-  }
+  };
 
   while (1) {
     for (hal::LedValue& led : image1d.leds) {
