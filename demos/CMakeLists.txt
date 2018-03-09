@@ -17,3 +17,8 @@ add_executable(turn_lights_off turn_lights_off.cpp)
   set_property(TARGET turn_lights_off PROPERTY CXX_STANDARD 11)
   target_link_libraries(turn_lights_off matrix_creator_hal)
   target_link_libraries(turn_lights_off ${CMAKE_THREAD_LIBS_INIT})
+
+add_executable(light_stuff light_stuff.cpp)
+  set_property(TARGET light_stuff PROPERTY CXX_STANDARD 11)
+  target_link_libraries(light_stuff matrix_creator_hal)
+  target_link_libraries(light_stuff ${CMAKE_THREAD_LIBS_INIT})
