@@ -38,7 +38,7 @@ int main() {
 
     everloop.Write(&image1d);
     ++counter;
-    usleep(20000);
+    usleep(200000);
     std::cout << counter << "\n";
   }
 
