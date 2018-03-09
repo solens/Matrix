@@ -49,9 +49,9 @@ int main() {
     }
 
     for (int led_num = 0; led_num < 18; ++led_num){
-      image1d.leds[led_num].red = colors[counter % 18][0];
-      image1d.leds[led_num].green = colors[counter % 18][1];
-      image1d.leds[led_num].blue = colors[counter % 18][2];
+      image1d.leds[led_num].red = colors[(led_num + counter) % 18][0];
+      image1d.leds[led_num].green = colors[(led_num + counter) % 18][1];
+      image1d.leds[led_num].blue = colors[(led_num + counter) % 18][2];
       image1d.leds[led_num].white = 0;
     }
     
