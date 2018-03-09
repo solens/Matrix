@@ -28,10 +28,10 @@ int main() {
     }
 
     for (int led_num = 0; led_num < 18; ++led_num){
-      image1d.leds[led_num].red = 0;
-      image1d.leds[led_num].green = 0;
-      image1d.leds[led_num].blue = 0;
-      image1d.leds[led_num].white = ((led_num + counter) % 18 ) * (255/17);
+      image1d.leds[led_num].red = ((led_num + counter) % 18 ) * (128/17);
+      image1d.leds[led_num].green = ((led_num + counter + 6) % 18 ) * (128/17);
+      image1d.leds[led_num].blue = ((led_num + counter + 12) % 18 ) * (128/17);
+      image1d.leds[led_num].white = 0;
     }
     
     
