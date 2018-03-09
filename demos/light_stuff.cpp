@@ -31,7 +31,7 @@ int main() {
       image1d.leds[led_num].red = 0;
       image1d.leds[led_num].green = 0;
       image1d.leds[led_num].blue = 0;
-      image1d.leds[led_num].white = counter * 255 % 18;
+      image1d.leds[led_num].white = ((led_num + counter) % 18 ) * (255/17);
     }
     
     
