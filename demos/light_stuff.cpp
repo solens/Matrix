@@ -19,7 +19,7 @@ int main() {
 
   unsigned counter = 0;
 
-  int colors[18][3] = {
+/*  int colors[18][3] = {
     {255,0,0},
     {255,96,0},
     {255,192,0}
@@ -39,7 +39,8 @@ int main() {
     {255,0,192},
     {255,0,96}
   };
-
+*/
+  int colors[1][3] = {{255,0,0}};
   while (1) {
     for (hal::LedValue& led : image1d.leds) {
       led.red = 0;
