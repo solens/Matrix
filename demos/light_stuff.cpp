@@ -19,6 +19,27 @@ int main() {
 
   unsigned counter = 0;
 
+  int colors[18][3] = {
+    {255,0,0},
+    {255,96,0},
+    {255,192,0}
+    {255,255,0},
+    {192,255,0},
+    {96,255,0},
+    {0,255,0},
+    {0,255,96},
+    {0,255,192},
+    {0,255,255},
+    {0,192,255},
+    {0,96,255},
+    {0,0,255},
+    {96,0,255},
+    {192,0,255},
+    {255,0,255},
+    {255,0,192},
+    {255,0,96}
+  }
+
   while (1) {
     for (hal::LedValue& led : image1d.leds) {
       led.red = 0;
@@ -28,9 +49,9 @@ int main() {
     }
 
     for (int led_num = 0; led_num < 18; ++led_num){
-      image1d.leds[led_num].red = ((led_num + counter) % 18 ) * (255/17);
-      image1d.leds[led_num].green = ((led_num + counter + 6) % 18 ) * (255/17);
-      image1d.leds[led_num].blue = ((led_num + counter + 12) % 18 ) * (255/17);
+      image1d.leds[led_num].red = colors[counter % 18][0];
+      image1d.leds[led_num].green = colors[counter % 18][1];
+      image1d.leds[led_num].blue = colors[counter % 18][2];
       image1d.leds[led_num].white = 0;
     }
     
@@ -39,7 +60,6 @@ int main() {
     everloop.Write(&image1d);
     ++counter;
     usleep(200000);
-    std::cout << counter << "\n";
   }
 
   return 0;
